@@ -1,5 +1,6 @@
 .wrapper {
   padding: 0 22px;
+  background-color: var(--color-5);
 }
 
 .inner-wrapper {

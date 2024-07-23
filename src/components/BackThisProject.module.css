@@ -4,6 +4,7 @@
   background-color: var(--color-1);
   border-radius: 15px;
   border: 1px solid var(--color-2);
+  margin-bottom: 25px;
 }
 
 .img-wrapper {
@@ -20,6 +21,10 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+.under-title {
+  color: var(--color-7);
 }
 
 .btn-wrapper {
