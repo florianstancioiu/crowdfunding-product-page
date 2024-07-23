@@ -22,7 +22,7 @@ const BackThisProject = () => {
 
       <div className={classes['btn-wrapper']}>
         <Button title='Back this project' />
-        <SvgButton svg={bookmarkSvg} />
+        <SvgButton className={classes['svg-btn']} svg={bookmarkSvg} />
       </div>
     </div>
   );

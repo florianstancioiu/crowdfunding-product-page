@@ -28,3 +28,7 @@
   grid-template-columns: 4fr 1fr;
   column-gap: 10px;
 }
+
+.svg-btn {
+  justify-self: center;
+}
