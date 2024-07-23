@@ -1,0 +1,17 @@
+.header {
+  background-image: url('/images/image-hero-mobile.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.wrapper {
+  padding: 30px 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+}
