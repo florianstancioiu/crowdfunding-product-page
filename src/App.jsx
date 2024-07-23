@@ -1,3 +1,4 @@
+import classes from './App.module.css';
 import Header from './components/Header';
 import BackThisProject from './components/BackThisProject';
 import TotalBackers from './components/TotalBackers';
@@ -8,11 +9,13 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <BackThisProject />
-        <TotalBackers />
-        <AboutProject />
-        <Rewards />
+      <main className={classes.wrapper}>
+        <div className={classes['inner-wrapper']}>
+          <BackThisProject />
+          <TotalBackers />
+          <AboutProject />
+          <Rewards />
+        </div>
       </main>
     </>
   );

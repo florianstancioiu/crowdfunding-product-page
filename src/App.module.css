@@ -1,0 +1,8 @@
+.wrapper {
+  padding: 0 22px;
+}
+
+.inner-wrapper {
+  position: relative;
+  top: -55px;
+}
