@@ -9,7 +9,12 @@ const Base = ({ hasCloseBtn = true, title, children, closeModal }) => {
           {hasCloseBtn && (
             <div className={classes.header}>
               <p className={classes.title}>{title}</p>
-              <img onClick={closeModal} src={timesSvg} alt='' />
+              <img
+                className={classes['times-icon']}
+                onClick={closeModal}
+                src={timesSvg}
+                alt=''
+              />
             </div>
           )}
           <div className={classes.body}>{children}</div>
