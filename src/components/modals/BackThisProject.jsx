@@ -7,7 +7,7 @@ const pledges = [
   {
     id: 1,
     isSelected: false,
-    title: 'ledge with no reward',
+    title: 'Pledge with no reward',
     description: `Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.`,
     pledge: 0,
     minimumPledge: 0,
@@ -16,7 +16,7 @@ const pledges = [
   },
   {
     id: 2,
-    isSelected: false,
+    isSelected: true,
     title: 'Bamboo Stand',
     description: `You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.`,
     pledge: 25,
@@ -60,18 +60,20 @@ const BackThisProject = ({ show = true, closeModal }) => {
               Want to support us in bringing Mastercraft Bamboo Monitor Riser
               out in the world?
             </p>
-            {pledges.map((pledge) => (
-              <ModalPledge
-                key={pledge.id}
-                isSelected={pledge.isSelected}
-                title={pledge.title}
-                description={pledge.description}
-                pledge={pledge.pledge}
-                minimumPledge={pledge.minimumPledge}
-                maximumPledge={pledge.maximumPledge}
-                remainingPledges={pledge.remainingPledges}
-              />
-            ))}
+            <div className={classes['pledges-wrapper']}>
+              {pledges.map((pledge) => (
+                <ModalPledge
+                  key={pledge.id}
+                  isSelected={pledge.isSelected}
+                  title={pledge.title}
+                  description={pledge.description}
+                  pledge={pledge.pledge}
+                  minimumPledge={pledge.minimumPledge}
+                  maximumPledge={pledge.maximumPledge}
+                  remainingPledges={pledge.remainingPledges}
+                />
+              ))}
+            </div>
           </Modal>,
           document.getElementById('modal-root')
         )}

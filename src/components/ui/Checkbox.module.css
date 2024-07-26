@@ -1,0 +1,28 @@
+.checkbox {
+  border-radius: 50%;
+  border: 1px solid var(--color-12);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.checkbox:hover,
+.checkbox.active {
+  border-color: var(--color-14);
+}
+
+.checkbox.active .checkbox-inner,
+.checkbox:hover .checkbox-inner {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.checkbox-inner {
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-14);
+}

@@ -11,7 +11,7 @@ const App = () => {
     <>
       <Header />
       <ThankYouModal show={false} />
-      <BackThisProjectModal show={false} />
+      <BackThisProjectModal show={true} />
       <main className={classes.wrapper}>
         <div className={classes['inner-wrapper']}>
           <BackThisProject />

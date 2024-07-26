@@ -1,0 +1,23 @@
+.amount-input {
+  position: relative;
+  height: 52px;
+  border: 1px solid var(--color-12);
+  border-radius: 48px;
+}
+
+.input {
+  width: 100%;
+  line-height: 48px;
+  border: none;
+  text-align: center;
+  border-radius: 48px;
+}
+
+.prefix {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: var(--color-12);
+  user-select: none;
+}
