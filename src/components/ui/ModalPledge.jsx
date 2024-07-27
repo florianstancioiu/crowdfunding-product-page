@@ -38,7 +38,7 @@ const ModalPledge = ({
           <p className={classes['pledges-left-text']}>left</p>
         </div>
       </div>
-      {isSelected && (
+      {isSelected && showMinimumPledge && (
         <div className={classes['enter-pledge-wrapper']}>
           <div className={classes['pledge-inner']}>
             <p className={classes['enter-pledge-title']}>Enter your pledge</p>
