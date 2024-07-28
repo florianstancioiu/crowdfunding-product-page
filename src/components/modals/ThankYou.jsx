@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import classes from './ThankYou.module.css';
 import { default as Modal } from './Base';
@@ -7,6 +8,10 @@ import { useDispatch } from 'react-redux';
 import { productActions } from '../../store/product';
 
 const ThankYou = ({ show = true, onOverlayClick }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [show]);
+
   const dispatch = useDispatch();
 
   const hideModalOnBtnClick = () => {

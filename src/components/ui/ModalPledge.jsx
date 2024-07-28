@@ -38,6 +38,7 @@ const ModalPledge = ({
           <Checkbox
             onClick={disableCheckbox ? () => {} : () => selectPledge(id)}
             isActive={isSelected}
+            disabled={disableCheckbox}
           />
           <div className={classes['title-wrapper']}>
             <p className={classes.title}>{title}</p>

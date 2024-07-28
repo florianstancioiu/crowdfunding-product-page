@@ -8,6 +8,10 @@
   place-items: center;
 }
 
+.checkbox.disabled {
+  cursor: not-allowed;
+}
+
 .checkbox:hover,
 .checkbox.active {
   border-color: var(--color-14);
