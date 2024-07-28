@@ -2,6 +2,8 @@ import classes from './ModalPledge.module.css';
 import AmountInput from './AmountInput';
 import Button from './Button';
 import Checkbox from './Checkbox';
+import { useDispatch } from 'react-redux';
+import { productActions } from '../../store/product';
 
 const ModalPledge = ({
   id,
@@ -13,17 +15,30 @@ const ModalPledge = ({
   maximumPledge,
   remainingPledges,
 }) => {
+  const dispatch = useDispatch();
   const wrapperClasses = isSelected
     ? `${classes.pledge} ${classes.active}`
     : classes.pledge;
-
+  const disableCheckbox = remainingPledges === 0;
   const showMinimumPledge = minimumPledge !== 0;
+
+  const showThankYouModal = () => {
+    dispatch(productActions.hideBackThisProjectModal());
+    dispatch(productActions.showThankYouModal);
+  };
+
+  const selectPledge = (id) => {
+    dispatch(productActions.setSelectedPledge({ selectedPledge: id }));
+  };
 
   return (
     <div id={`modal-pledge-${id}`} className={wrapperClasses}>
       <div className={classes['pledge-inner']}>
         <div className={classes['checkbox-wrapper']}>
-          <Checkbox isActive={isSelected} />
+          <Checkbox
+            onClick={disableCheckbox ? () => {} : () => selectPledge(id)}
+            isActive={isSelected}
+          />
           <div className={classes['title-wrapper']}>
             <p className={classes.title}>{title}</p>
             {showMinimumPledge && (
@@ -52,7 +67,7 @@ const ModalPledge = ({
                 minValue={minimumPledge}
                 maxValue={maximumPledge}
               />
-              <Button title='Continue' />
+              <Button onClick={showThankYouModal} title='Continue' />
             </div>
           </div>
         </div>

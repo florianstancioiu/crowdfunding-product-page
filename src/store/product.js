@@ -28,6 +28,12 @@ const productSlice = createSlice({
     hideThankYouModal(state) {
       state.showThankYouModal = false;
     },
+    setSelectedPledge(state, action) {
+      state.selectedPledge =
+        action?.payload?.selectedPledge !== undefined
+          ? action.payload.selectedPledge
+          : null;
+    },
   },
 });
 
