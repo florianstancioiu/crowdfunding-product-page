@@ -1,7 +1,7 @@
 # Todos
 
-- [ ] implement mobile design
-- [ ] implement logic
+- [x] implement mobile design
+- [x] implement logic
 - [ ] implement desktop design
 - [ ] add typescript
 - [ ] add storybook
