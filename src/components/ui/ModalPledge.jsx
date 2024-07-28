@@ -24,7 +24,7 @@ const ModalPledge = ({
 
   const showThankYouModal = () => {
     dispatch(productActions.hideBackThisProjectModal());
-    dispatch(productActions.showThankYouModal);
+    dispatch(productActions.showThankYouModal());
   };
 
   const selectPledge = (id) => {
