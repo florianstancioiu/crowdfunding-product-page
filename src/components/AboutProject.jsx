@@ -1,26 +1,6 @@
 import classes from './AboutProject.module.css';
 import Stand from './ui/Stand';
-
-const stands = [
-  {
-    title: 'Bamboo Stand',
-    pledge: 25,
-    description: `You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.`,
-    amountLeft: 101,
-  },
-  {
-    title: 'Black Edition Stand',
-    pledge: 75,
-    description: `You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.`,
-    amountLeft: 64,
-  },
-  {
-    title: 'Mahogany Special Edition',
-    pledge: 200,
-    description: `You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.`,
-    amountLeft: 0,
-  },
-];
+import { pledges } from '../pledges';
 
 const AboutProject = () => {
   return (
@@ -39,15 +19,18 @@ const AboutProject = () => {
         to be stored under the stand.
       </p>
       <div className={classes['stands-wrapper']}>
-        {stands.map((stand, index) => (
-          <Stand
-            key={index}
-            title={stand.title}
-            pledge={stand.pledge}
-            description={stand.description}
-            amountLeft={stand.amountLeft}
-          />
-        ))}
+        {pledges.map(
+          (stand, index) =>
+            stand.pledge !== 0 && (
+              <Stand
+                key={index}
+                title={stand.title}
+                pledge={stand.pledge}
+                description={stand.description}
+                amountLeft={stand.remainingPledges}
+              />
+            )
+        )}
       </div>
     </div>
   );

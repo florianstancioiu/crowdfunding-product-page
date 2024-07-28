@@ -33,10 +33,12 @@ const ModalPledge = ({
           </div>
         </div>
         <p className={classes.description}>{description}</p>
-        <div className={classes['pledges-left-wrapper']}>
-          <p className={classes['pledges-left']}>{remainingPledges}</p>
-          <p className={classes['pledges-left-text']}>left</p>
-        </div>
+        {showMinimumPledge && (
+          <div className={classes['pledges-left-wrapper']}>
+            <p className={classes['pledges-left']}>{remainingPledges}</p>
+            <p className={classes['pledges-left-text']}>left</p>
+          </div>
+        )}
       </div>
       {isSelected && showMinimumPledge && (
         <div className={classes['enter-pledge-wrapper']}>

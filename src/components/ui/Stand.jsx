@@ -8,7 +8,7 @@ const Stand = ({ title, pledge, description, amountLeft }) => {
   return (
     <div className={classes.stand}>
       <p className={classes.title}>{title}</p>
-      <p className={classes.pledge}>Pledge {pledge} or more</p>
+      <p className={classes.pledge}>Pledge ${pledge} or more</p>
       <p className={classes.description}>{description}</p>
       <div className={classes['amount-left-wrapper']}>
         <p className={classes.amount}>{amountLeft}</p>
