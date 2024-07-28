@@ -1,8 +1,15 @@
 import classes from './AboutProject.module.css';
 import Stand from './ui/Stand';
 import { pledges } from '../pledges';
+import { useDispatch } from 'react-redux';
+import { productActions } from '../store/product';
 
 const AboutProject = () => {
+  const dispatch = useDispatch();
+  const onSelectRewardClick = (id) => {
+    dispatch(productActions.showBackThisProjectModal({ selectedPledge: id }));
+  };
+
   return (
     <div className={classes.wrapper}>
       <p className={classes.title}>About this project</p>
@@ -28,6 +35,7 @@ const AboutProject = () => {
                 pledge={stand.pledge}
                 description={stand.description}
                 amountLeft={stand.remainingPledges}
+                onSelectRewardClick={() => onSelectRewardClick(stand.id)}
               />
             )
         )}

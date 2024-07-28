@@ -1,7 +1,13 @@
 import classes from './Stand.module.css';
 import Button from './Button';
 
-const Stand = ({ title, pledge, description, amountLeft }) => {
+const Stand = ({
+  title,
+  pledge,
+  description,
+  amountLeft,
+  onSelectRewardClick,
+}) => {
   const disabledBtn = amountLeft === 0;
   const disabledBtnTitle = disabledBtn ? 'Out of Stock' : 'Select Reward';
 
@@ -15,7 +21,11 @@ const Stand = ({ title, pledge, description, amountLeft }) => {
         <p className={classes.left}>left</p>
       </div>
       <div className={classes['reward-wrapper']}>
-        <Button title={disabledBtnTitle} disabled={disabledBtn} />
+        <Button
+          onClick={disabledBtn ? () => {} : onSelectRewardClick}
+          title={disabledBtnTitle}
+          disabled={disabledBtn}
+        />
       </div>
     </div>
   );

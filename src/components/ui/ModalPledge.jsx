@@ -4,6 +4,7 @@ import Button from './Button';
 import Checkbox from './Checkbox';
 
 const ModalPledge = ({
+  id,
   isSelected,
   title,
   description,
@@ -19,7 +20,7 @@ const ModalPledge = ({
   const showMinimumPledge = minimumPledge !== 0;
 
   return (
-    <div className={wrapperClasses}>
+    <div id={`modal-pledge-${id}`} className={wrapperClasses}>
       <div className={classes['pledge-inner']}>
         <div className={classes['checkbox-wrapper']}>
           <Checkbox isActive={isSelected} />

@@ -17,6 +17,7 @@ const App = () => {
   const showBackThisProjectModal = useSelector(
     (state) => state.product.showBackThisProjectModal
   );
+  const selectedPledge = useSelector((state) => state.product.selectedPledge);
 
   const onThankYouModalOverlayClick = () => {
     dispatch(productActions.hideThankYouModal());
@@ -36,6 +37,7 @@ const App = () => {
       <BackThisProjectModal
         show={showBackThisProjectModal}
         onOverlayClick={onBackThisProjectModalOverlayClick}
+        selectedPledge={selectedPledge}
       />
       <main className={classes.wrapper}>
         <div className={classes['inner-wrapper']}>

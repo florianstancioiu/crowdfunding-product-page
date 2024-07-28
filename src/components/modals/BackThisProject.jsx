@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import classes from './BackThisProject.module.css';
 import { createPortal } from 'react-dom';
 import { default as Modal } from './Base';
@@ -9,6 +10,14 @@ const BackThisProject = ({
   selectedPledge = null,
   onOverlayClick,
 }) => {
+  useEffect(() => {
+    if (selectedPledge) {
+      document
+        .getElementById(`modal-pledge-${selectedPledge}`)
+        .scrollIntoView();
+    }
+  }, [selectedPledge]);
+
   return (
     <>
       {show &&
@@ -26,7 +35,8 @@ const BackThisProject = ({
               {pledges.map((pledge) => (
                 <ModalPledge
                   key={pledge.id}
-                  isSelected={selectedPledge}
+                  id={pledge.id}
+                  isSelected={selectedPledge === pledge.id}
                   title={pledge.title}
                   description={pledge.description}
                   pledge={pledge.pledge}
