@@ -4,7 +4,11 @@ import { default as Modal } from './Base';
 import ModalPledge from '../ui/ModalPledge';
 import { pledges } from '../../pledges';
 
-const BackThisProject = ({ show = true, closeModal }) => {
+const BackThisProject = ({
+  show = true,
+  selectedPledge = null,
+  onOverlayClick,
+}) => {
   return (
     <>
       {show &&
@@ -12,7 +16,7 @@ const BackThisProject = ({ show = true, closeModal }) => {
           <Modal
             title='Back this project'
             hasCloseBtn={true}
-            closeModal={closeModal}
+            onOverlayClick={onOverlayClick}
           >
             <p className={classes.description}>
               Want to support us in bringing Mastercraft Bamboo Monitor Riser
@@ -22,7 +26,7 @@ const BackThisProject = ({ show = true, closeModal }) => {
               {pledges.map((pledge) => (
                 <ModalPledge
                   key={pledge.id}
-                  isSelected={pledge.isSelected}
+                  isSelected={selectedPledge}
                   title={pledge.title}
                   description={pledge.description}
                   pledge={pledge.pledge}

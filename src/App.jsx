@@ -6,12 +6,37 @@ import AboutProject from './components/AboutProject';
 import { default as ThankYouModal } from './components/modals/ThankYou';
 import { default as BackThisProjectModal } from './components/modals/BackThisProject';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { productActions } from './store/product';
+
 const App = () => {
+  const dispatch = useDispatch();
+  const showThankYouModal = useSelector(
+    (state) => state.product.showThankYouModal
+  );
+  const showBackThisProjectModal = useSelector(
+    (state) => state.product.showBackThisProjectModal
+  );
+
+  const onThankYouModalOverlayClick = () => {
+    dispatch(productActions.hideThankYouModal());
+  };
+
+  const onBackThisProjectModalOverlayClick = () => {
+    dispatch(productActions.hideBackThisProjectModal());
+  };
+
   return (
     <>
       <Header />
-      <ThankYouModal show={false} />
-      <BackThisProjectModal show={false} />
+      <ThankYouModal
+        show={showThankYouModal}
+        onOverlayClick={onThankYouModalOverlayClick}
+      />
+      <BackThisProjectModal
+        show={showBackThisProjectModal}
+        onOverlayClick={onBackThisProjectModalOverlayClick}
+      />
       <main className={classes.wrapper}>
         <div className={classes['inner-wrapper']}>
           <BackThisProject />

@@ -4,7 +4,16 @@ import bookmarkSvg from '../images/icon-bookmark.svg';
 import Button from './ui/Button';
 import SvgButton from './ui/SvgButton';
 
+import { productActions } from '../store/product';
+import { useDispatch } from 'react-redux';
+
 const BackThisProject = () => {
+  const dispatch = useDispatch();
+
+  const backThisProjectBtnClick = () => {
+    dispatch(productActions.showBackThisProjectModal());
+  };
+
   return (
     <div className={classes.wrapper}>
       <div className={classes['img-wrapper']}>
@@ -21,7 +30,7 @@ const BackThisProject = () => {
       </p>
 
       <div className={classes['btn-wrapper']}>
-        <Button title='Back this project' />
+        <Button onClick={backThisProjectBtnClick} title='Back this project' />
         <SvgButton className={classes['svg-btn']} svg={bookmarkSvg} />
       </div>
     </div>
