@@ -29,3 +29,38 @@
   width: 80px;
   height: 1px;
 }
+
+@media screen and (min-width: 1440px) {
+  .inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrapper {
+    padding: 50px 48px;
+  }
+
+  .item {
+    margin-top: 0;
+    border-right: 1px solid var(--color-7);
+    padding-right: 55px;
+    text-align: left;
+  }
+
+  .item:last-child {
+    border-right: 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .under-title {
+    margin-bottom: 0;
+  }
+}
