@@ -2,7 +2,6 @@
 
 - [x] implement mobile design
 - [x] implement logic
-- [ ] implement desktop design
-- [ ] add typescript
+- [x] implement desktop design
 - [ ] add storybook
 - [ ] create proper readme file
