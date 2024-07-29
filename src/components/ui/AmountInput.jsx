@@ -1,6 +1,6 @@
 import classes from './AmountInput.module.css';
 
-const AmountInput = ({ prefix = false, value, minValue, maxValue }) => {
+const AmountInput = ({ prefix = '', value, minValue, maxValue }) => {
   return (
     <div className={classes['amount-input']}>
       {prefix && <span className={classes.prefix}>{prefix}</span>}

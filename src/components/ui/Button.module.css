@@ -9,6 +9,7 @@
   cursor: pointer;
   font-weight: 500;
   user-select: none;
+  min-width: 100px;
 }
 
 .btn:hover {
