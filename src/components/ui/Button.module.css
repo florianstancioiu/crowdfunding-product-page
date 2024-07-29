@@ -11,10 +11,15 @@
   user-select: none;
 }
 
+.btn:hover {
+  background-color: var(--color-15);
+}
+
 .disabled {
   background-color: var(--color-10);
   cursor: not-allowed;
 }
+
 @media screen and (min-width: 1440px) {
   .btn {
     max-width: 204px;

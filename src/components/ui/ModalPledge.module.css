@@ -72,3 +72,51 @@
   column-gap: 16px;
   align-items: center;
 }
+
+.desktop-pledge {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .mobile-pledge {
+    display: none;
+  }
+
+  .desktop-pledge {
+    display: block;
+  }
+
+  .title-pledges-left-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pledges-left-wrapper {
+    margin-bottom: 0;
+  }
+
+  .title-minimum-pledge-wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .enter-pledge-wrapper {
+    padding-top: 20px;
+  }
+
+  .enter-pledge-wrapper .pledge-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .enter-pledge-inner {
+    width: 224px;
+  }
+
+  .enter-pledge-title {
+    margin-bottom: 0;
+  }
+}
