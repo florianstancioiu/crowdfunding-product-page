@@ -7,3 +7,14 @@
   position: relative;
   top: -55px;
 }
+
+@media screen and (min-width: 1440px) {
+  .inner-wrapper {
+    top: -88px;
+  }
+
+  .wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,21 @@
+.title {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .bookmark-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-8);
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .title {
+    display: block;
+    padding-left: 16px;
+    padding-right: 26px;
+  }
+}
