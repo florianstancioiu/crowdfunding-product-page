@@ -1,11 +1,20 @@
 import classes from './Base.module.css';
 import timesSvg from '../../images/icon-close-modal.svg';
 
-const Base = ({ hasCloseBtn = true, title, children, onOverlayClick }) => {
+const Base = ({
+  title,
+  children,
+  onOverlayClick,
+  hasCloseBtn = true,
+  extraClasses = '',
+}) => {
+  const modalClasses =
+    extraClasses !== '' ? `${classes.modal} ${extraClasses}` : classes.modal;
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.overlay} onClick={onOverlayClick}></div>
-      <div className={classes.modal}>
+      <div className={modalClasses}>
         {hasCloseBtn && (
           <div className={classes.header}>
             <p className={classes.title}>{title}</p>

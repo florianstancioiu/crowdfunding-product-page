@@ -22,7 +22,11 @@ const ThankYou = ({ show = true, onOverlayClick }) => {
     <>
       {show &&
         createPortal(
-          <Modal hasCloseBtn={false} onOverlayClick={onOverlayClick}>
+          <Modal
+            hasCloseBtn={false}
+            onOverlayClick={onOverlayClick}
+            extraClasses={classes['thank-you-modal']}
+          >
             <img className={classes['check-img']} src={checkSvg} alt='' />
             <p className={classes.title}>Thanks for your support!</p>
             <p className={classes.description}>

@@ -20,3 +20,9 @@
   margin: 0 auto;
   max-width: 108px;
 }
+
+@media screen and (min-width: 1440px) {
+  .thank-you-modal {
+    max-width: 540px !important;
+  }
+}
