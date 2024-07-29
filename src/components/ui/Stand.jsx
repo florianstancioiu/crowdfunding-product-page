@@ -13,19 +13,23 @@ const Stand = ({
 
   return (
     <div className={classes.stand}>
-      <p className={classes.title}>{title}</p>
-      <p className={classes.pledge}>Pledge ${pledge} or more</p>
-      <p className={classes.description}>{description}</p>
-      <div className={classes['amount-left-wrapper']}>
-        <p className={classes.amount}>{amountLeft}</p>
-        <p className={classes.left}>left</p>
+      <div className={classes['title-pledge-wrapper']}>
+        <p className={classes.title}>{title}</p>
+        <p className={classes.pledge}>Pledge ${pledge} or more</p>
       </div>
-      <div className={classes['reward-wrapper']}>
-        <Button
-          onClick={disabledBtn ? () => {} : onSelectRewardClick}
-          title={disabledBtnTitle}
-          disabled={disabledBtn}
-        />
+      <p className={classes.description}>{description}</p>
+      <div className={classes['amount-reward-wrapper']}>
+        <div className={classes['amount-left-wrapper']}>
+          <p className={classes.amount}>{amountLeft}</p>
+          <p className={classes.left}>left</p>
+        </div>
+        <div className={classes['reward-wrapper']}>
+          <Button
+            onClick={disabledBtn ? () => {} : onSelectRewardClick}
+            title={disabledBtnTitle}
+            disabled={disabledBtn}
+          />
+        </div>
       </div>
     </div>
   );

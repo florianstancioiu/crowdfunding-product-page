@@ -41,3 +41,16 @@
 .reward-wrapper {
   width: 156px;
 }
+
+@media screen and (min-width: 1440px) {
+  .title-pledge-wrapper,
+  .amount-reward-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .amount-left-wrapper {
+    margin-bottom: 0;
+  }
+}
