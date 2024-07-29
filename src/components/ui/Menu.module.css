@@ -3,6 +3,10 @@
   margin-top: 36px;
 }
 
+.show-on-desktop {
+  display: none;
+}
+
 .inner-menu {
   background-color: var(--color-1);
   border-radius: 10px;
@@ -20,4 +24,30 @@
 .link a {
   text-decoration: none;
   color: var(--color-6);
+}
+
+@media screen and (min-width: 1440px) {
+  .show-on-desktop {
+    display: block;
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  .inner-menu {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 35px;
+  }
+
+  .link {
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .link a {
+    color: var(--color-1);
+  }
 }

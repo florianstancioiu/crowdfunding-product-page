@@ -25,6 +25,7 @@ const Header = () => {
             src={hamburgerSvg}
             alt=''
           />
+          <Menu showOnDesktop={true} />
         </div>
       )}
       {showMenu && (

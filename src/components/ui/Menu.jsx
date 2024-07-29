@@ -1,8 +1,12 @@
 import classes from './Menu.module.css';
 
-const Menu = () => {
+const Menu = ({ showOnDesktop = false }) => {
+  const wrapperClasses = showOnDesktop
+    ? `${classes['show-on-desktop']} ${classes.menu}`
+    : classes.menu;
+
   return (
-    <div className={classes.menu}>
+    <div className={wrapperClasses}>
       <div className={classes['inner-menu']}>
         <div className={classes.link}>
           <a href='#'>About</a>

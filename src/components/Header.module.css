@@ -25,3 +25,20 @@
   background-color: #00000082;
   z-index: 2;
 }
+
+@media screen and (min-width: 1440px) {
+  .header {
+    background-image: url('/images/image-hero-desktop.jpg');
+    min-height: 400px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .wrapper {
+    max-width: 1108px;
+    margin: 0 auto 0;
+    padding: 54px 0 0;
+  }
+}
