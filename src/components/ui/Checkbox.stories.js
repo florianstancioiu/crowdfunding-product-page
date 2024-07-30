@@ -1,4 +1,3 @@
-import '../../main.css';
 import Checkbox from './Checkbox';
 import { fn } from '@storybook/test';
 

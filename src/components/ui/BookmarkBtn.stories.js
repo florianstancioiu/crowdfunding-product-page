@@ -1,4 +1,3 @@
-import '../../main.css';
 import BookmarkBtn from './BookmarkBtn';
 
 export default {

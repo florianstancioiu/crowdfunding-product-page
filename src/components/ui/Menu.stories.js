@@ -1,6 +1,4 @@
-import '../../main.css';
 import Menu from './Menu';
-import { fn } from '@storybook/test';
 
 export default {
   title: 'UI/Menu',

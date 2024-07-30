@@ -1,4 +1,3 @@
-import '../../main.css';
 import ModalPledge from './ModalPledge';
 import { Provider } from 'react-redux';
 import store from '../../store';
@@ -69,6 +68,19 @@ export const WithoutPledge = {
   args: {
     id: 2,
     isSelected: false,
+    title: 'Lorem Ipsum',
+    description,
+    pledge: 20,
+    minimumPledge: 0,
+    maximumPledge: 50,
+    remainingPledges: 111,
+  },
+};
+
+export const SelectedWithoutPledge = {
+  args: {
+    id: 2,
+    isSelected: true,
     title: 'Lorem Ipsum',
     description,
     pledge: 20,

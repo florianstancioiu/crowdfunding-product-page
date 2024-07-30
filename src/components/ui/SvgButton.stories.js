@@ -1,4 +1,3 @@
-import '../../main.css';
 import SvgButton from './SvgButton';
 import checkSvg from '../../images/icon-check.svg';
 

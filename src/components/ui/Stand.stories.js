@@ -1,4 +1,3 @@
-import '../../main.css';
 import Stand from './Stand';
 import { fn } from '@storybook/test';
 

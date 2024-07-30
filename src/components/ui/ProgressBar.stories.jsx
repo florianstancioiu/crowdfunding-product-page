@@ -1,4 +1,3 @@
-import '../../main.css';
 import ProgressBar from './ProgressBar';
 
 /**

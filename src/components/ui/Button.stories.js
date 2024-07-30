@@ -1,4 +1,3 @@
-import '../../main.css';
 import Button from './Button';
 import { fn } from '@storybook/test';
 

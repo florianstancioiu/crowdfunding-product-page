@@ -1,4 +1,3 @@
-import '../../main.css';
 import AmountInput from './AmountInput';
 
 export default {

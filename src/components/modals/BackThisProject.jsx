@@ -6,9 +6,9 @@ import ModalPledge from '../ui/ModalPledge';
 import { pledges } from '../../pledges';
 
 const BackThisProject = ({
+  onOverlayClick,
   show = true,
   selectedPledge = null,
-  onOverlayClick,
 }) => {
   useEffect(() => {
     if (selectedPledge) {
