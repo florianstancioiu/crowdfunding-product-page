@@ -7,7 +7,7 @@ import checkSvg from '../../images/icon-check.svg';
 import { useDispatch } from 'react-redux';
 import { productActions } from '../../store/product';
 
-const ThankYou = ({ show = true, onOverlayClick }) => {
+const ThankYou = ({ onOverlayClick, show = true }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [show]);
